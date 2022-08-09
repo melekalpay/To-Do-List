@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!--Fonts-->
+    
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+	<main class="app">
+		
+		<section class="greeting">
+			<h2 class="title">
+				Hoşgeldiniz, <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		
+		<section class="create-todo">
+			<h3>Yapılacaklar Listeni Oluştur</h3>
+			<form id="new-todo-form">
+				<h4>Listene Eklemek İstediklerin ?</h4>
+				<input 
+					type="text" 
+					placeholder="örneğin Ekmek al"
+					name="content"
+					id="content" />
+				
+				<h4>Kategori Seçiniz</h4>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="business" /> 
+						<span class="bubble business"></span>
+						<div>İş</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Kişisel</div>
+					</label>
+				</div>
+
+				<input type="submit" value="Ekle" />
+			</form>
+		</section>
+		
+		<section class="todo-list">
+			<h3>Yapılacaklar Listesi</h3>
+			<div class="list" id="todo-list">
+                <div class="todo-item">
+                    <label>
+                        <input type="checkbox" />
+                        <span class="bubble business"></span>
+                    </label>
+                    <div class="todo-content">
+                        <input type="text" value="Video Oluştur" readonly/>
+
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Düzenle</button>
+                        <button class="delete">Sil</button>
+                    </div>
+
+                    <label>
+                        <input type="checkbox" />
+                        <span class="bubble personal"></span>
+                    </label>
+                    <div class="todo-content">
+                        <input type="text" value="Süt al" readonly/>
+
+                    </div>
+                    <div class="actions">
+                        <button class="edit">Düzenle</button>
+                        <button class="delete">Sil</button>
+                    </div>
+                </div>
+            </div>
+
+		</section>
+		
+
+	</main>
+
+    <script src="app.js"></script>
+</body>
+</html>
